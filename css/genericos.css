@@ -1,0 +1,436 @@
+/*detalles comunes a todas las páginas*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+  flex: 1; /* Esto empuja el footer hacia abajo */
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+:root {
+    --color-naranja: #c95a1f;
+    --color-negro: #1A1A1A;
+    --color-gris-claro: #F4F4F4;
+    --color-texto: #333;
+    --fuente-principal: 'Arial', sans-serif;
+}
+/*CABECERA*/
+header {
+    background-color: var(--color-negro);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-naranja);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+.logo-texto {
+    color: var(--color-naranja);
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo-texto{
+    color: #ffffff;
+}
+
+/* Estilos para las partes del logo */
+.logo-all {
+    color: #ffffff; /* ALL en blanco */
+}
+
+.logo-shoes {
+    color: var(--color-naranja); /* SHOES en naranja */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.activo {
+    color: var(--color-naranja);
+}
+
+/*ESTILOS COMUNES*/
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    color: var(--color-negro);
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 0;
+    border-bottom: 2px solid var(--color-gris-claro);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Estilo específico para el título de la página Cursos */
+.titulo-seccion.titulo-cursos {
+    /* eliminamos bordes locales: el contenedor full-width los pinta */
+    border-top: none;
+    border-bottom: none;
+    padding: 12px 24px;
+}
+
+/* Contenedor full-width para bordes que ocupen toda la pantalla */
+.titulo-wrap-full, .titulo-seccion {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    box-sizing: border-box;
+    border-top: 3px solid #888585;
+    border-bottom: 3px solid #888585;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 0px;
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    background-color: var(--color-negro);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--color-naranja);
+}
+
+/*INICIO*/
+
+.banner-principal-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0; 
+    background-color: #cccccc;
+}
+
+.banner-principal {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    margin-bottom: 40px;
+}
+
+.banner-principal-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    line-height: normal;
+}
+
+.banner-principal-overlay h2 {
+    color: #ffffff;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1.18;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+    margin: 0;
+    text-transform: none;
+}
+
+/* Parte inferior del inicio */
+.bottom-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.bottom-left {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.bottom-left p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.65;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.bottom-right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.bottom-right img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #cccccc;
+}
+
+/*SOBRE NOSOTROS */
+.about-container {
+    display: flex;
+    gap: 40px;
+}
+
+.about-img {
+    width: 40%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.about-text {
+    width: 60%;
+}
+
+.about-text h3 {
+    color: var(--color-naranja);
+    margin-bottom: 15px;
+}
+
+/* antiguas filas horizontales de iconos, ahora reemplazadas por arco */
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* extra hover specifically in arc container adds brightness */
+.social-arc-container .social-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* contenedor para arco de iconos sobre logo central */
+.social-arc-container {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    margin: 0 auto 40px;
+}
+
+.social-arc-container .logo-central {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px; /* increased size */
+    height: auto;
+}
+
+.logo-central{
+    margin-left: 14px;
+    margin-bottom: 20px;
+}
+
+/* posicionamiento de cada icono en arco usando transform */
+.arc-link {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: bottom center;
+}
+/* reduce translateY para acercar iconos al logo central */
+.arc1 { transform: rotate(-60deg) translateY(-60px) rotate(60deg); }
+.arc2 { transform: rotate(-30deg) translateY(-60px) rotate(30deg); }
+.arc3 { transform: rotate(0deg) translateY(-60px) rotate(0deg); }
+.arc4 { transform: rotate(30deg) translateY(-60px) rotate(-30deg); }
+.arc5 { transform: rotate(60deg) translateY(-60px) rotate(-60deg); }
+
+
+/*CURSOS*/
+.curso-card {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: center;
+}
+.tarjeta-curso.invertir, .curso-card.invertir {
+        flex-direction: row-reverse;
+}
+
+.curso-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.curso-info h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.duracion {
+    font-weight: bold;
+    color: var(--color-naranja);
+    margin-bottom: 15px;
+    display: block;
+}
+
+/*TIENDA*/
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.producto-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.producto-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.producto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-naranja);
+    margin: 10px 0;
+    display: block;
+}
+
+/*CONTACTO*/
+.contacto-container {
+    display: flex;
+    gap: 50px;
+}
+
+.contacto-info, .contacto-form {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--color-gris-claro);
+}
+
+/*SEPARADORES DE TITULOS*/
+.separador, .about-container, .productos-grid{
+    margin: 40px 0;
+
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .about-container, .curso-card, .contacto-container, .bottom-content {
+        flex-direction: column;
+    }
+
+    .banner-principal-img, .about-img, .about-text, .curso-img, .bottom-left {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .banner-principal-overlay h2 {
+        font-size: 40px;
+    }
+
+    .banner-principal-img {
+        height: 350px;
+    }
+
+    .bottom-right {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .bottom-right img {
+        height: 180px;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .bottom-right {
+        grid-template-columns: 1fr;
+    }
+}
