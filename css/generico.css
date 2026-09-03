@@ -1,0 +1,44 @@
+
+/*Bajera */
+ footer{
+    display: flex;
+    background-color: rgb(0, 3, 17);
+}
+.apartados{
+    margin-left: 35px;
+    color: rgb(255, 255, 255);
+    width: 20%;
+    padding-top: 25px;
+}
+.enlaces{
+    margin-left: 35px;
+    padding-top: 25px;
+    color: rgb(255, 255, 255);
+    width: 20%;
+    display: inline-block;
+}
+.lista{
+    border-bottom: 3px solid rgb(185, 53, 0);
+    margin-bottom: 10px;
+}
+
+.icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 50%;
+    border: 20px solid #3b3b3b;
+    height: 30px;
+    width: 30px;
+    background-color: #3b3b3b;
+    color: #ffffff;
+    margin-top: 12px;
+}
+.fa-brands, .fab{
+    color: #fffdfd;
+    
+}
+p{
+    margin-bottom: 12px;
+}
